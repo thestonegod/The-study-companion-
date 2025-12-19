@@ -12,6 +12,7 @@ and monitor consistency over time.
 - Date / Greeting
 
 [ Study Input Section ]
+- Input: Study Subject
 - Input: Study Topic
 - Input: Duration (minutes)
 - Button: "Add Study Session"
