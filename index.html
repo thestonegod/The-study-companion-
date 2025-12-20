@@ -1,129 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Study & Reflect</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- App Header -->
-  <header>
-    <h1>The Ultimate Study App</h1>
-    <p class="tagline">Track with discipline. Reflect with clarity.</p>
+  <header class="app-header">
+    <h1>Study & Reflect</h1>
+    <p class="tagline">Track your study. Reflect with intention.</p>
+
+    <!-- Entry Quote -->
+     <!-- Multiple classes separated by spaces i.e shared/base behaviour -->
+    <div class="quote quote-entry">
+      <p id="entry-quote">Quote appears here on app load</p>
+    </div>
   </header>
 
-  <!-- Quote Display -->
-  <section id="quote-box">
-    <p id="quote-text">
-      <!-- JS will insert quotes here -->
-    </p>
-  </section>
-
   <!-- Main App -->
-  <main>
+  <main class="app-container">
 
     <!-- Study Session Section -->
-    <section id="study-session">
+    <section class="study-session">
+
       <h2>Study Session</h2>
 
+      <!-- Focus Quote -->
+      <div class="quote quote-focus">
+        <p id="focus-quote">Quote appears when session starts</p>
+      </div>
+
+      <!-- Collect user input -->
       <form id="study-form">
 
-        <label for="subject">
-          Subject
-          <input 
-            type="text" 
-            id="subject" 
-            placeholder="e.g. JavaScript"
-            required
-          >
+        <label>
+          <span>Subject</span>
+          <input type="text" id="subject" placeholder="e.g. JavaScript, Cybersecurity" required />
         </label>
 
-        <label for="duration">
-          Duration (minutes)
-          <input 
-            type="number" 
-            id="duration" 
-            placeholder="e.g. 45"
-            required
-            min="1"
-          >
+        <label>
+          <span>Duration (minutes)</span>
+          <input type="number" id="duration" placeholder="e.g. 45" required />
         </label>
 
-        <!-- Focus Message -->
-        <div id="focus-message">
-          <p>
-            <!-- JS inserts focus quote here -->
-          </p>
-        </div>
+        <!-- Optional Fancy Notes -->
+        <label class="notes-box">
+          <span>Study Notes (optional)</span>
+          <textarea
+            id="study-notes"
+            placeholder="Jot ideas, thoughts, key points…"></textarea>
+        </label>
 
-        <button type="submit">
-          Start & Save Session
+        <button type="submit" id="start-session">
+          Save Study Session
         </button>
 
       </form>
-    </section>
-
-    <!-- Reflection Section -->
-    <section id="reflection">
-      <h2>Reflection</h2>
-
-      <form id="reflection-form">
-
-        <label for="reflection-study">
-          What did you study?
-          <textarea 
-            id="reflection-study"
-            placeholder="Be honest. Be brief."
-            required
-          ></textarea>
-        </label>
-
-        <label for="reflection-good">
-          What went well? (optional)
-          <textarea 
-            id="reflection-good"
-            placeholder="Optional"
-          ></textarea>
-        </label>
-
-        <label for="reflection-improve">
-          What will you improve next time? (optional)
-          <textarea 
-            id="reflection-improve"
-            placeholder="Optional"
-          ></textarea>
-        </label>
-
-        <button type="submit">
-          Save Reflection
-        </button>
-
-      </form>
-
-      <!-- Post-session Quote -->
-      <div id="end-quote">
-        <p>
-          <!-- JS inserts closing quote here -->
-        </p>
-      </div>
     </section>
 
     <!-- Study History -->
-    <section id="study-history">
+    <section class="study-history">
       <h2>Study History</h2>
 
       <ul id="session-list">
-        <!-- JS will insert session items -->
+        <!-- JavaScript injects sessions here -->
       </ul>
+    </section>
+
+    <!-- Reflection Section (Mandatory) -->
+    <section class="reflection-section">
+
+      <h2>Reflection</h2>
+
+      <label>
+        <span>What did you study?</span>
+        <textarea
+          id="reflection-study"
+          placeholder="Brief, clear summary of what you studied"
+          required></textarea>
+      </label>
+
+      <label>
+        <span>Key takeaway</span>
+        <textarea
+          id="reflection-takeaway"
+          placeholder="One or two strong insights"
+          required></textarea>
+      </label>
+
+      <button id="save-reflection">
+        Save Reflection
+      </button>
+
+      <!-- Closure Quote -->
+      <div class="quote quote-closure">
+        <p id="closure-quote">Quote appears after reflection</p>
+      </div>
+
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>Built with intention.</p>
+  <footer class="app-footer">
+    <p id="footer-quote">Built with discipline at heart.</p>
   </footer>
 
   <script src="script.js"></script>
