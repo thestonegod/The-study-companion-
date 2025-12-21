@@ -1,11 +1,11 @@
 //JS waits until HTML exists
-document.addEventListener("DOMContentLoaded"),function() {
+document.addEventListener("DOMContentLoaded",function() {
     //List of quotes
     const entryQuotes = [
       "Don't you wanna be smart?",
       "One session everyday is a ton of knowledge.",
       "Do what makes you feel you.",
-      "Procastination is a sign of indiscipline.",
+      "Procrastination is a sign of indiscipline.",
       "Focus is a deliberate decision.",
       "knowledge never gets old"
     ];
@@ -31,4 +31,9 @@ document.addEventListener("DOMContentLoaded"),function() {
         const randomIndex = Math.floor(Math.random()* quotesArray.length);
         return quotesArray[randomIndex];
     }
-}
+
+   //Entry quotes on app load
+    const entryQuoteEl = document.getElementById("entry-quote");
+
+    entryQuoteEl.textContent = getRandomQuote(entryQuotes);
+});
