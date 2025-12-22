@@ -27,13 +27,45 @@ document.addEventListener("DOMContentLoaded",function() {
         "Reflect. Reset. Repeat."
     ]
 
+
+    //selector = getRandomQuote()
+    //signature fuction for all quotes
     function getRandomQuote(quotesArray) {
         const randomIndex = Math.floor(Math.random()* quotesArray.length);
         return quotesArray[randomIndex];
     }
 
+    function displayQuote (element, quoteArray) {
+        element.textContent = getRandomQuote(quoteArray);
+        getRandomQuote(quoteArray);
+    }
+
    //Entry quotes on app load
     const entryQuoteEl = document.getElementById("entry-quote");
 
-    entryQuoteEl.textContent = getRandomQuote(entryQuotes);
-});
+    displayQuote(entryQuoteEl, entryQuotes);
+
+    //Study form
+    //Declaring js variable names for the HTML tag names.
+    const studyForm = document.getElementById("study-form");
+    const focusQuoteEl = document.getElementById("focus-quote");
+    const closureQuoteEl = document.getElementById("closure-quote");
+
+    //
+    studyForm.addEventListener("submit", lockedInFocus);
+    function lockedInFocus (event) {
+        event.preventDefault (); //prevents page refresh or flashes. 
+        // A non-nego line in handling forms
+        displayQuote (focusQuoteEl, focusQuotes);
+    };
+
+
+        //Closure quote
+    const saveReflectionBtn = document.getElementById("save-reflection");
+    //Event type is not equals to function name
+    //Events describe user action, function names describe intention o what code does
+    saveReflectionBtn.addEventListener("click", handleReflectionSave) ;    
+    function handleReflectionSave() {
+        displayQuote (closureQuoteEl, closureQuotes);
+    }
+}); 
