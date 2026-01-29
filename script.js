@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded",function() {
         "Deep work builds sharp minds.",
         "Repeatition isn't failure. It's quiet mastery.",
         "Stay grounded.",
-        "Dont stop at challenges,stop at solutions."
+        "Dont stop at challenges,stop at solutions.",
+        "A student without knowledge is like a car without an engine."
     ]
 
     const closureQuotes = [
