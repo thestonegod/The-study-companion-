@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded",function() {
       "Do what makes you feel you.",
       "Procrastination is a sign of indiscipline.",
       "Focus is a deliberate decision.",
-      "knowledge never gets old"
+      "knowledge never gets old",
+      "Your brain is the most closest tool in proximity."
     ];
 
     const focusQuotes = [
