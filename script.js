@@ -8,20 +8,20 @@ document.addEventListener("DOMContentLoaded",function() {
       "Procrastination is a sign of indiscipline.",
       "Focus is a deliberate decision.",
       "knowledge never gets old",
-      "Your brain is the most closest tool in proximity."
+      "Your brain is your greatest tool in proximity."
     ];
 
     const focusQuotes = [
         "Attention is power.",
         "Deep work builds sharp minds.",
-        "Repeatition isn't failure. It's quiet mastery.",
+        "Repetition isn't failure. It's quiet mastery.",
         "Stay grounded.",
-        "Dont stop at challenges,stop at solutions.",
+        "Don't stop at challenges, stop at solutions.",
         "A student without knowledge is like a car without an engine."
     ]
 
     const closureQuotes = [
-        "You logged in to a self-upgrade system today.",
+        "You logged in to a self-upgrading system today.",
         "Progress was made!",
         "Baby steps train you for the big leaps.",
         "Successful at heart",
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded",function() {
         //Closure quote
     const saveReflectionBtn = document.getElementById("save-reflection");
     //Event type is not equals to function name
-    //Events describe user action, function names describe intention o what code does
+    //Events describe user action, function names describe intention on what code does
     saveReflectionBtn.addEventListener("click", handleReflectionSave) ;    
     function handleReflectionSave() {
         displayQuote (closureQuoteEl, closureQuotes);
